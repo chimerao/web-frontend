@@ -1,0 +1,24 @@
+<h1>Messages</h1>
+
+<ul id="boxes">
+	<li class="active">Inbox</li>
+<!--
+	<li>Sent</li>
+	<li>Archived</li>
+	<li>Trash</li>
+-->
+</ul>
+
+<div id="messages-container">
+	<div class="options">
+		<button id="delete-checked">delete</button>
+		<!-- button id="archive-checked">archive</button -->
+		<button id="markread-checked">mark as read</button>
+	</div>
+
+	<div class="global">
+		<input type="checkbox" id="all-check" />
+	</div>
+	<table id="messages"></table>
+</div>
+<div class="clear"></div>

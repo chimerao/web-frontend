@@ -1,0 +1,6 @@
+<div>shared</div>
+<% if (target.type !== 'Journal') { %>
+	<a href="<%= target.url %>"><img src="<%= target.image.thumb_120.url %>" /></a>
+<% } else { %>
+	<a href="<%= target.url %>"><%= target.title %></a>
+<% } %>

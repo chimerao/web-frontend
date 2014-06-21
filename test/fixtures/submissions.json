@@ -1,0 +1,69 @@
+{
+	"dragonSubmission": {
+		"id": 1,
+		"title": "Hey there!",
+		"url_title": "hey-there",
+		"description": "Just sayin' hi!",
+		"profile_id": 1,
+		"width": 600,
+		"height": 600,
+		"favorites_count": 0,
+		"comments_count": 0,
+		"shares_count": 0,
+		"views_count": 0,
+		"published_at": "2014-01-01T12:00:00.000Z",
+		"updated_at": "2014-01-01T12:00:00.000Z",
+		"type": "Submission",
+		"tags": [
+			"classical",
+			"chimera"
+		],
+		"is_adult": false,
+		"file": "/test/fixtures/files/Chimera-600.jpg",
+		"image": {
+			"thumb_64": {
+				"url": "/test/fixtures/files/Chimera-240.jpg"
+			},
+			"thumb_96": {
+				"url": "/test/fixtures/files/Chimera-240.jpg"
+			},
+			"thumb_240": {
+				"url": "/test/fixtures/files/Chimera-240.jpg"
+			},
+			"thumb_400": {
+				"url": "/test/fixtures/files/Chimera-600.jpg"
+			},
+			"resized": {
+				"url": "/test/fixtures/files/Chimera-600.jpg"
+			}
+		},
+		"submission_folder": {
+			"id": 1,
+			"profile_id": 1,
+			"name": "Mythical Creatures",
+			"url_name": "mythical-creatures",
+			"created_at": "2014-01-01T12:00:00.000Z",
+			"updated_at": "2014-01-01T12:00:00.000Z"
+		},
+		"collaborators": [
+			{
+				"id": 1,
+				"type": "Profile",
+				"name": "Dragon",
+				"site_identifier": "Dragon",
+				"url": "/Dragon",
+				"profile_pic": {
+					"url": "/test/fixtures/files/Chimera-240.jpg"
+				}
+			}
+		],
+		"in_series": false,
+		"replies_count": 0,
+		"is_faved": false,
+		"is_shared": false,
+		"url": "/submissions/1",
+		"comments_url": "/submissions/1/comments",
+		"fave_url": "/submissions/1/fave",
+		"share_url": "/submissions/1/share"
+	}
+}

@@ -1,0 +1,6 @@
+<h3>Message from <%= message.sender.name %></h3>
+
+<p><%= message.body %></p>
+
+<!-- button id="reply">reply</button -->
+<button id="delete">delete</button>

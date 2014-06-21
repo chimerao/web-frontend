@@ -1,0 +1,126 @@
+{
+	"profiles": [
+			{
+				"id": 1,
+				"name": "Dragon",
+				"site_identifier": "Dragon",
+				"url": "/Dragon",
+				"profile_pic": {
+					"id": 1,
+					"type": "ProfilePic",
+					"image": {
+						"available_sizes": [
+							48,
+							52,
+							64,
+							80,
+							96,
+							128,
+							256,
+							384,
+							512
+						],
+						"url": "fixtures/files/Chimera-240.jpg"
+					}
+				},
+				"active": true
+			},
+			{
+				"id": 2,
+				"name": "Donkey",
+				"site_identifier": "Donkey",
+				"url": "/Donkey",
+				"profile_pic": {
+					"id": null,
+					"type": "ProfilePic",
+					"image": {
+						"available_sizes": [
+							48,
+							52,
+							64,
+							80,
+							96,
+							128,
+							256,
+							384,
+							512
+						],
+						"url": "fixtures/files/Chimera-240.jpg"
+					}
+				},
+				"active": false
+			}
+	],
+
+	"dragonProfile": {
+		"id": 1,
+		"type": "Profile",
+		"name": "Dragon",
+		"site_identifier": "Dragon",
+		"bio": "",
+		"location": "",
+		"homepage": "",
+		"following_count": 0,
+		"followers_count": 0,
+		"created_at": "2014-01-01T12:00:00.000Z",
+		"banner_image": {
+			"url": "fixtures/files/Chimera_di_Arezzo.jpg"
+		},
+		"profile_pic": {
+			"id": 1,
+			"type": "ProfilePic",
+			"image": {
+				"available_sizes": [
+					48,
+					52,
+					64,
+					80,
+					96,
+					128,
+					256,
+					384,
+					512
+				],
+				"url": "fixtures/files/Chimera-240.jpg"
+			}
+		},
+		"other_profiles": [
+			{
+				"id": 2,
+				"type": "Profile",
+				"name": "Donkey",
+				"site_identifier": "Donkey",
+				"url": "/Donkey",
+				"profile_pic": {
+					"id": null,
+					"type": "ProfilePic",
+					"image": {
+						"available_sizes": [
+							48,
+							52,
+							64,
+							80,
+							96,
+							128,
+							256,
+							384,
+							512
+						],
+						"url": "fixtures/files/Chimera-240.jpg"
+					}
+				}
+			}
+		],
+		"filters": [],
+		"tags": [],
+		"url": "/Dragon",
+		"submissions_url": "/profiles/1/submissions",
+		"journals_url": "/profiles/1/journals",
+		"profile_pics_url": "/profiles/1/pics",
+		"filters_url": "/profiles/1/filters",
+		"submission_folders_url": "/profiles/1/submission_folders",
+		"favorite_folders_url": "/profiles/1/favorite_folders",
+		"messages_url": "/profiles/1/messages",
+		"upload_url": "/profiles/1/submissions/unpublished"
+	}
+}

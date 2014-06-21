@@ -1,0 +1,8 @@
+<form accept-charset="UTF-8" action="#" id="folder-form" method="post">
+	<fieldset>
+		<label for="folder_name">Name</label>
+		<input id="folder_name" name="folder[name]" spellcheck="false" type="text" value="<%= folder.name %>" />
+
+		<button type="submit">save</button>
+	</fieldset>
+</form>

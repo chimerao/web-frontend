@@ -1,0 +1,9 @@
+<h1>Join Group</h1>
+<p>Do you want to ask to join <%= profile.name %>'s group?</p>
+<br />
+<h2><%= filter.name %></h2>
+<p><%= filter.description %></p>
+<div class="weight-down">
+	<button id="filter-yes">yes</button>
+	<button id="filter-no" class="cancel">no</button>
+</div>

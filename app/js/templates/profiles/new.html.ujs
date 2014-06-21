@@ -1,0 +1,15 @@
+<h1>New profile</h1>
+<% if (newUser) { %>
+<h2>Welcome!</h2>
+
+<p class="welcome">You need to create a default profile. This will be what represents you on our site.</p>
+<% } %>
+<form accept-charset="UTF-8" action="/profiles" class="new_profile" id="new_profile" method="post">
+	<fieldset>
+		<label for="profile_name">Name</label>
+		<input id="profile_name" name="profile[name]" spellcheck="false" type="text" />
+		<label for="profile_site_identifier">Site Identifier</label>
+		<input id="profile_site_identifier" name="profile[site_identifier]" spellcheck="false" type="text" />
+		<button name="button" type="submit">create profile</button>
+	</fieldset>
+</form>

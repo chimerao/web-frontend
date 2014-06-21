@@ -1,0 +1,13 @@
+<div class="journal wrapper">
+	<div class="journal-pic">
+		<a href="#"><img src="<%= journal.profile_pic.pixels_128.url %>" /></a>
+	</div>
+	<div class="body">
+		<h1><%= journal.title %></h1>
+		<div class="timestamp">written <%= timeAgo(journal.published_at) %></div>
+	<% if (journal.replyable) { %>
+		<div class="replyable">as a reply to <a href="<%= journal.replyable.url %>"><%= journal.replyable.title %></a></div>
+	<% } %>
+		<%= marked(journal.body) %>
+	</div>
+</div>

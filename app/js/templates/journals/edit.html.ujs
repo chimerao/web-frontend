@@ -1,0 +1,56 @@
+<form accept-charset="UTF-8" action="/profiles/<%= profile.id %>/journals" class="new_journal" id="new_journal" method="post">
+	<div class="page_controls">
+	  <ul>
+	    <li class="title">New Journal</li>
+	    <li class="filter" id="filter-control">
+	      <div>Filters <span id="filter-arrow">&#9660;</span></div>
+	      <div id="filter-list"></div>
+	    </li>
+	    <li class="tag-list">
+	      <div>Tags</div>
+	      <input id="tag-list" name="journal[tag_list]" type="text" value="" />
+	    </li>
+	    <li class="save"><a href="#" id="page-save">Save</a></li>
+	    <li class="publish"><a href="#" id="page-publish">Publish</a></li>
+	    <li class="back"><a href="/profiles/<%= profile.id %>/journals">Back</a></li>
+	  </ul>
+	</div>
+	<div class="clear"></div>
+
+	<% if (journal.replyable) { %>
+	<div class="reply">
+		<h5 style="text-align:center;">
+			This journal is a reply to
+			<%= journal.replyable.type %>:
+			<%= journal.replyable.title %>
+		</h5>
+	</div>
+	<div class="clear"></div>
+	<% } %>
+
+	<% if (journal.previous_journal) { %>
+		<div class="reply">
+			<h5 style="text-align:center;">
+				This journal next in a series. Previous:
+				<%= journal.previous_journal.title %>
+			</h5>
+		</div>
+		<div class="clear"></div>
+	<% } %>
+
+	<fieldset class="journal">
+		<div class="profile-pic">
+			<div class="profile-pic-selectable" id="profile-pic-selectable">
+				<div class="profile-pic-image">
+					<img src="<%= currentProfile.profile_pic.pixels_96.url %>" />
+				</div>
+			</div>
+		</div>
+		<div class="journal-page">
+			<h1 id="journal-title" class="title edit placeholder" contenteditable="true" data-placeholder="Type your title here"></h1>
+
+			<div id="journal-body" class="body editable"></div>
+		</div>
+	</fieldset>
+	<div class="clear"></div>
+</form>

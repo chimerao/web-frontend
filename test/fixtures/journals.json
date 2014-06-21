@@ -1,0 +1,54 @@
+{
+	"dragonJournal": {
+		"id": 1,
+		"title": "Dragons are slow.",
+		"url_title": "dragons-are-slow",
+		"body": "Dragons are derpy and dim.\n\n",
+		"favorites_count": 0,
+		"comments_count": 0,
+		"shares_count": 0,
+		"views_count": 0,
+		"published_at": "2014-01-01T12:00:00.000Z",
+		"updated_at": "2014-01-01T12:00:00.000Z",
+		"type": "Journal",
+		"tags": [
+			"derpy",
+			"dragons"
+		],
+		"profile": {
+			"id": 1,
+			"type": "Profile",
+			"name": "Dragon",
+			"site_identifier": "Dragon",
+			"url": "/Dragon"
+		},
+		"profile_pic": {
+			"id": 1,
+			"type": "ProfilePic",
+			"image": {
+				"available_sizes": [
+					48,
+					52,
+					64,
+					80,
+					96,
+					128,
+					256,
+					384,
+					512
+				],
+				"url": "fixtures/files/Chimera-pic.jpg"
+			}
+		},
+		"in_series": false,
+		"replies_count": 0,
+		"is_faved": false,
+		"is_shared": false,
+		"url": "/journals/1",
+		"comments_url": "/journals/1/comments",
+		"fave_url": "/journals/1/fave",
+		"share_url": "/journals/1/share",
+		"new_series_url": "/profiles/1/journals/1/series",
+		"reply_url": "/journals/1/reply/{type}"
+	}
+}

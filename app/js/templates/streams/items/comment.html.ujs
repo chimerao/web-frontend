@@ -1,0 +1,7 @@
+<div>
+	commented on
+	<a href="<%= target.commentable.url %>"><%= target.commentable.title %></a>
+<% if (target.commentable.type !== 'Journal') { %>
+	<img src="<%= target.commentable.image.thumb_96.url %>" />
+<% } %>
+</div>

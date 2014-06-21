@@ -1,0 +1,22 @@
+<h1>Editing Profile</h1>
+
+<form accept-charset="UTF-8" action="/profiles/<%= profile.id %>" class="edit_profile" id="edit_profile" method="patch">
+	<fieldset>
+		<label for="profile_name">Name</label>
+		<input id="profile_name" name="profile[name]" spellcheck="false" type="text" value="<%= profile.name %>" />
+
+		<label for="profile_site_identifier">Site Identifier</label>
+		<input id="profile_site_identifier" name="profile[site_identifier]" spellcheck="false" type="text" value="<%= profile.site_identifier %>" />
+
+		<label for="profile_bio">Bio</label>
+		<textarea id="profile_bio" name="profile[bio]"><%= profile.bio %></textarea>
+
+		<label for="profile_location">Location</label>
+		<input id="profile_location" name="profile[location]" spellcheck="false" type="text" value="<%= profile.location %>" />
+
+		<label for="profile_homepage">Homepage</label>
+		<input id="profile_homepage" name="profile[homepage]" spellcheck="false" type="text" value="<%= profile.homepage %>" />
+
+		<button name="button" type="submit">update profile</button>
+	</fieldset>
+</form>

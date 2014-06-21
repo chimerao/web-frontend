@@ -1,0 +1,13 @@
+{
+	"name": "Chimerao",
+	"description": "Creative social site",
+	"launch_path": "/index.html",
+	"icons": {
+		"128": "/img/icon-128.png"
+	},
+	"developer": {
+		"name": "Chimerao",
+		"url": "http://chimerao.com"
+	},
+	"default_locale": "en"
+}

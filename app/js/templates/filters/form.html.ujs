@@ -1,0 +1,15 @@
+<form accept-charset="UTF-8" action="#" id="filter-form" method="post">
+	<fieldset>
+		<label for="filter_name">Name</label>
+		<input id="filter_name" name="filter[name]" spellcheck="false" type="text" value="<%= filter.name %>" />
+
+		<label for="filter_description">Description</label>
+		<textarea id="filter_description" name="filter[description]"><%= filter.description %></textarea>
+
+		<label for="filter_opt_in">
+			<input type="checkbox" id="filter_opt_in" name="filter[opt_in]" <% if (filter.opt_in) { %>checked<% } %> /> Opt-In
+		</label>
+
+		<button type="submit">save</button>
+	</fieldset>
+</form>

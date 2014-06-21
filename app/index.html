@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=utf-8 />
+	<title>Imaginate</title>
+	<script data-main="/js/main.js" src="/js/lib/require.js"></script>
+	<link href="/css/application.css" media="screen" rel="stylesheet" />
+	<link href="/css/medium-editor.css" rel="stylesheet" />
+	<style type="text/css">
+		a.thumbnail > img.filtered { filter: url(#thumbnail-blur); }
+		a.thumbnail > img.filtered:hover { filter: none; }
+	</style>
+</head>
+<body>
+
+<div class="header">
+	<div class="logo">
+		<a href="/submissions">C</a>
+	</div>
+	<div id="header"></div>
+</div>
+
+<div id="content"></div>
+
+<div id="footer">
+	<p class="copyright">Site Copyright &copy; 2014 Chimerao, LLC</p>
+	<p class="copyright">All media copyright their respective creators.</p>
+</div>
+
+<svg id="svg-effects">
+	<filter id="thumbnail-blur">
+		<feGaussianBlur stdDeviation="4" />
+	</filter>
+</svg>
+
+<script id="headerTemplate" type="text/template">
+	<div class="left-nav">
+	<% if (active) { %>
+		<a href="/" id="nav-dash"><div class="glyph">&#x2302;</div><div class="nav-text">Home</div></a>
+		<a href="/unpublished" id="nav-upload"><div class="glyph">&#x21DE;</div><div class="nav-text">Upload</div></a>
+		<a href="<%= journals_url %>/new" id="nav-journal"><div class="glyph">&#x270D;</div><div class="nav-text">Journal</div></a>
+	<% } %>
+	</div>
+	<div class="right-nav">
+	<% if (active) { %>
+		<div id="settings"><div class="glyph">&#x272B;</div></div>
+		<div class="profile">
+			<div class="profile-pic" id="nav-profile">
+				<a href="<%= url %>"><img src="<%= profile_pic.pixels_52.url %>" /></a>
+			</div>
+			<a href="#" id="profile-select">&#9660;</a>
+		</div>
+		<a href="/messages" id="nav-messages"><div class="glyph mail">&#x2709;</div><div id="nav-message-count"></div></a>
+		<a href="/notifications" id="nav-notifications"><div class="glyph notification">!</div><div id="nav-notification-count"></div></a>
+	<% } else { %>
+		<a href="/login" id="nav-login">sign in</a>
+		<div class="separator">-</div>
+		<a href="/signup" id="nav-signup">sign up</a>
+	<% } %>
+	</div>
+</script>
+
+</body>
+</html>

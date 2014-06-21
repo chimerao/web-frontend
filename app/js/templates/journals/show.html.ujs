@@ -1,0 +1,78 @@
+<div class="journal wrapper">
+	<div class="journal-pic">
+		<a href="#"><img src="<%= journal.profile_pic.pixels_128.url %>" /></a>
+	</div>
+	<div class="body">
+		<h1><%= journal.title %></h1>
+		<div class="timestamp">written <%= timeAgo(journal.published_at) %></div>
+	<% if (journal.replyable) { %>
+		<div class="replyable">as a reply to <a href="<%= journal.replyable.url %>"><%= journal.replyable.title %></a></div>
+	<% } %>
+		<%= marked(journal.body) %>
+	</div>
+</div>
+
+<div class="journal flow">
+	<div class="head">
+		<div class="social">
+		<% if (currentProfile.active) { %>
+			<div class="fave">
+			<% if (journal.is_faved) { %>
+				<a href="<%= journal.fave_url %>" data-method="delete" class="fave">-fave</a>
+			<% } else { %>
+				<a href="<%= journal.fave_url %>" data-method="post" class="fave">+fave</a>
+			<% } %>
+			<% if (journal.is_shared) { %>
+				<a href="<%= journal.share_url %>" data-method="delete" class="share">-share</a>
+			<% } else { %>
+				<a href="<%= journal.share_url %>" data-method="post" class="share">+share</a>
+			<% } %>
+			</div>
+		<% } %>
+		</div>
+	
+		<ul class="metadata">
+			<li class="favorites"><span class="glyph">&#x2665;</span><span class="count"><%= journal.favorites_count %></span></li>
+			<li class="comments"><span class="glyph">&#x25CA;</span><span class="count"><%= journal.comments_count %></span></li>
+			<li class="shares"><span class="glyph">&#x21B9;</span><span class="count"><%= journal.shares_count %></span></li>
+			<li class="views"><span class="glyph">&#x25C9;</span><span class="count"><%= journal.views_count %></span></li>
+			<li class="report"></li>
+		</ul>
+	</div>
+	<div class="tags"><%= displayTags(journal.tags) %></div>
+
+	<% if (journal.in_series || ownerProfileActive) { %>
+	<div class="series">
+		<div class="previous">
+		<% if (journal.series && journal.series.previous) { %>
+			<div class="glyph">&#x2190;</div>
+			<h5><%= journal.series.previous.title %></h5>
+		<% } %>
+		</div>
+		<div class="next" id="next-series">
+		<% if (journal.series && journal.series.next) { %>
+			<div class="glyph">&#x2192;</div>
+			<h5><%= journal.series.next.title %></h5>
+		<% } else if (ownerProfileActive) { %>
+			<p><a href="#" id="new-series">Add new journal in a series</a></p>
+		<% } %>
+		</div>
+	</div>
+	<% } %>
+
+	<div class="replies">
+		<p id="next-reply"><a href="#" id="submission-reply">Reply with a submission</a></p>
+		<p><a href="#" id="journal-reply">Reply with a journal</a></p>
+	<% if (journal.replies_count > 0) { %>
+		<h4>Replies</h4>
+		<% journal.replies.forEach(function (reply) { %>
+			<a href="<%= reply.url %>"><%= reply.title %></a><br />
+		<% }) %>
+	<% } %>
+	</div>
+
+	<div class="discussion">
+		<ul id="comments"></ul>
+	</div>
+</div>
+<div class="clear"></div>

@@ -1,0 +1,88 @@
+<div class="head">
+	<h1 class="submission title"><%= submission.title %></h1>
+	<div class="folder">
+	<% if (submission.submission_folder) { %>
+		in <%= submission.submission_folder.name %>
+	<% } %>
+	</div>
+
+	<div class="social">
+	<% if (currentProfile.active) { %>
+		<div class="fave">
+		<% if (submission.is_faved) { %>
+			<a href="<%= submission.fave_url %>" data-method="delete" class="fave">-fave</a>
+		<% } else { %>
+			<a href="<%= submission.fave_url %>" data-method="post" class="fave">+fave</a>
+		<% } %>
+		<% if (submission.is_shared) { %>
+			<a href="<%= submission.share_url %>" data-method="delete" class="share">-share</a>
+		<% } else { %>
+			<a href="<%= submission.share_url %>" data-method="post" class="share">+share</a>
+		<% } %>
+		</div>
+		<% if (submission.claim_url) { %>
+			<a href="#" id="claim">I made this</a>
+		<% } %>
+	<% } %>
+	</div>
+
+	<ul class="metadata">
+		<li class="favorites"><span class="glyph">&#x2665;</span><span class="count"><%= submission.favorites_count %></span></li>
+		<li class="comments"><span class="glyph">&#x25CA;</span><span class="count"><%= submission.comments_count %></span></li>
+		<li class="shares"><span class="glyph">&#x21B9;</span><span class="count"><%= submission.shares_count %></span></li>
+		<li class="views"><span class="glyph">&#x25C9;</span><span class="count"><%= submission.views_count %></span></li>
+		<li class="report"></li>
+	</ul>
+</div>
+<div class="collaborators">
+<% submission.collaborators.forEach(function (profile) { %>
+	<div class="collaborator">
+		<a href="<%= profile.url %>">
+			<img src="<%= profile.profile_pic.url %>" />
+		</a>
+		<div class="name">
+			<a href="<%= profile.url %>"><%= profile.site_identifier %></a>
+		</div>
+	</div>
+<% }); %>
+</div>
+<div class="description"><%= linkFormat(marked(submission.description)) %></div>
+<div class="tags"><%= displayTags(submission.tags) %></div>
+
+<% if (submission.in_series || collabProfileActive) { %>
+<div class="series">
+	<div class="previous">
+	<% if (submission.series && submission.series.previous) { %>
+		<div class="glyph">&#x2190;</div>
+		<img src="<%= submission.series.previous.image.thumb_240.url %>" />
+	<% } %>
+	</div>
+	<div class="next" id="next-series">
+	<% if (submission.series && submission.series.next) { %>
+		<div class="glyph">&#x2192;</div>
+		<img src="<%= submission.series.next.image.thumb_240.url %>" />
+	<% } else if (collabProfileActive) { %>
+		<p><a href="#" id="new-series">Add new submission in a series</a></p>
+	<% } %>
+	</div>
+</div>
+<% } %>
+
+<div class="replies">
+	<p id="next-reply"><a href="#" id="submission-reply">Reply with a submission</a></p>
+	<p><a href="#" id="journal-reply">Reply with a journal</a></p>
+<% if (submission.replyable) { %>
+	This is a reply to: <a href="<%= submission.replyable.url %>"><%= submission.replyable.title %></a><br />
+<% } %>
+<% if (submission.replies_count > 0) { %>
+	<h4>Replies</h4>
+	<% submission.replies.forEach(function (reply) { %>
+		<a href="<%= reply.url %>"><%= reply.title %></a><br />
+	<% }) %>
+<% } %>
+</div>
+
+<div class="discussion">
+	<ul id="comments"></ul>
+</div>
+<div class="clear"></div>

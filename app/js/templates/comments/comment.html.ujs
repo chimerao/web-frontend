@@ -1,0 +1,28 @@
+<div class="profile-pic">
+	<a href="<%= comment.profile.url %>" class="profile-link" data-identifier="<%= comment.profile.site_identifier %>"><img src="<%= comment.profile_pic.url %>" /></a>
+</div>
+<div class="name"><a href="<%= comment.profile.url %>" class="profile-link" data-identifier="<%= comment.profile.site_identifier %>"><%= comment.profile.name %></a></div>
+<% if (currentProfile.active) { %>
+<div class="vote">
+	<span>+<%= comment.votes_count %></span>
+</div>
+<% } %>
+<div class="bubble">
+	<div class="text"><div class="talk-notch"></div>
+		<%= marked(comment.body) %>
+	<% if (comment.image_url) { %>
+		<a href="<%= comment.image_url %>" target="_new"><img src="<%= comment.image_url %>" />
+	<% } %>
+	</div>
+	<div class="comment-stats">
+		<%= timeAgo(comment.created_at) %>
+	</div>
+</div>
+<% if (currentProfile.active) { %>
+<div class="controls">
+	<a href="#" class="reply" id="reply-<%= comment.id %>"><span>reply</span></a>
+	<a href="#" class="delete" id="delete-<%= comment.id %>"><span>delete</span></a>
+</div>
+<% } %>
+<ul></ul>
+<div class="clear"></div>

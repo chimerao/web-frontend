@@ -1,0 +1,14 @@
+<h1>Send message to <%= recipient.name %></h1>
+
+<form accept-charset="UTF-8" action="/profiles/<%= profile.id %>/messages" class="new_message" id="new_message" method="post">
+
+	<fieldset class="message">
+		<label for="message_subject">Subject</label>
+		<input id="message_subject" name="message[subject]" type="text" autocomplete="off" />
+
+		<label for="message_body">Body</label>
+		<textarea id="message_body" name="message[body]" />
+
+		<button name="button" type="submit">send</button>
+	</fieldset>
+</form>

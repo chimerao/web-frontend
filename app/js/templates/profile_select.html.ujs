@@ -1,0 +1,12 @@
+<div id="profile-select-box" style="height:<%= 48 + (48 * (profiles.length + 1)) %>px;">
+	<div class="profile-select-title">Select Profile</div>
+	<ul id="profile-select-rows">
+	<% profiles.forEach(function (profile) { p = profile.attributes; %>
+		<li data-id="<%= p.id %>">
+			<img src="<%= p.profile_pic.pixels_48.url %>" />
+			<span><%= p.name %></span>
+		</li>
+	<% }) %>
+		<li data-id="0" class="profile-select-row"><span>Add a new profile</span></li>
+	</ul>
+</div>

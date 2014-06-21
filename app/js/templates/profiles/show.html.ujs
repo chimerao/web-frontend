@@ -1,0 +1,52 @@
+<div id="banner" class="image">
+	<div class="banner-image" style="background:url(<%= profile.banner_image.url %>) no-repeat;background-size:100%;">
+		<div class="primary">
+			<a href="<%= profile.url %>"><img class="profile-pic" src="<%= profile.profile_pic.pixels_80.url %>" /></a>
+			<h1>
+				<a href="<%= profile.url %>"><%= profile.name %></a>
+			<% if (currentProfile) { %>
+				<a href="<%= profile.follow_url %>" class="glyph" id="follow-link" data-method="post">+</a>
+				<a href="<%= profile.messages_url %>" class="glyph" id="send-message">&#x219D;</a>
+			<% } %>
+			</h1>
+			<h2><a href="<%= profile.url %>">@<%= profile.site_identifier %></a></h2>
+			<p><%= profile.bio %></p>
+			<div class="location"><%= profile.location %></div>
+			<div class="site"><%= profile.homepage %></div>
+		</div>
+		<div class="extra">
+		<% if (profile.filters.length > 0) { %>
+			<div class="filters">
+				Groups:
+				<%= _.map(profile.filters, function (filter) { return '<a href="#" data-id="' + filter.id + '" class="filter">' + filter.name + '</a>'; }).join(', ') %>
+			</div>
+		<% } %>
+		<% if (currentProfile) { %>
+			<div class="tags">
+			<%= _.map(profile.tags, function (tag) { return '<a href="#" data-tag="' + tag + '">#' + tag + '</a>'; }).join(' ') %>
+			</div>
+		<% } %>
+		<% if (profile.other_profiles.length > 0) { %>
+			<div class="profiles">
+				Other Profiles
+				<div class="pics">
+				<%= _.map(profile.other_profiles, function (other_profile) {
+					return '<a href="#" data-identifier="' + other_profile.site_identifier + '" class="other-profile"><img src="' + other_profile.profile_pic.image.url.replace('{size}', 48) + '" /></a>';
+				}).join('') %>
+				</div>
+			</div>
+		<% } %>
+		</div>
+	</div>
+	<div class="nav">
+		<ul class="nav" id="profile-nav">
+			<li data-id="submissions"><a href="/<%= profile.site_identifier %>/submissions">Submissions</a></li>
+			<li data-id="journals"><a href="/<%= profile.site_identifier %>/journals">Journals</a></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="profile-container"></div>

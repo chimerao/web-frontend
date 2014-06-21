@@ -1,0 +1,12 @@
+<h1>Edit Profile Pics</h1>
+
+<ul id="profile-pic-list"></ul>
+<div class="clear"></div>
+<p>Click a pic to make it your default</p>
+<br /><br />
+<form accept-charset="UTF-8" action="<%= pics_url %>" class="new_profile_pic" id="new_profile_pic" method="post">
+	<fieldset>
+		<h2>add more pics</h2>
+		<input type="file" id="profile_pic_image" name="profile_pic[image]" multiple="multiple" />
+	</fieldset>
+</form>

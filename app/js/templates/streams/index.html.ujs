@@ -1,0 +1,12 @@
+<div id="tabs">
+	<ul>
+		<li><a href="#">Dash</a></li>
+		<li><a href="#" class="glyph" id="new-stream">+</a></li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<div id="wrapper">
+	<div id="info"></div>
+	<div id="stream"></div>
+</div>
+<div class="clear"></div>

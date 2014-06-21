@@ -1,0 +1,23 @@
+<li class="comment make-comment" id="comment-form">
+	<form accept-charset="UTF-8" action="<%= comments_url %>" class="new_comment" enctype="multipart/form-data" id="comment-form" method="post" name="commentform">
+		<fieldset>
+			<div class="profile-pic">
+				<div class="profile-pic-selectable" id="profile-pic-selectable">
+					<div class="profile-pic-image">
+						<img src="<%= currentProfile.profile_pic.pixels_96.url %>" />
+					</div>
+				</div>
+			</div>
+			<div class="name"><%= currentProfile.name %></div>
+			<div class="bubble">
+				<div class="text"><div class="talk-notch"></div>
+					<textarea id="comment_body" name="comment[body]"></textarea>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- div class="attach-image"><span class="glyph">+</span> Attach Image</div -->
+			<input class="comment-image-input" id="comment_image" name="comment[image]" type="file" />
+			<button name="commit" type="submit">comment</button>
+		</fieldset>
+	</form>
+</li>

@@ -1,0 +1,111 @@
+{
+	"dragonJournalComments": [
+		{
+			"id": 1,
+			"comment_id": null,
+			"created_at": "2014-01-01T12:00:00.000Z",
+			"updated_at": "2014-01-01T12:00:00.000Z",
+			"body": "Hey there!",
+			"is_pose": false,
+			"votes_count": 0,
+			"image_url": null,
+			"profile": {
+				"id": 2,
+				"name": "Donkey",
+				"site_identifier": "Donkey",
+				"url": "/Donkey"
+			},
+			"profile_pic": {
+				"id": 1,
+				"type": "ProfilePic",
+				"url": "fixtures/files/Chimera-pic.jpg"
+			},
+			"commentable": {
+				"id": 1,
+				"type": "Journal"
+			},
+			"url": "/journals/1/comments/1"
+		},
+		{
+			"id": 2,
+			"comment_id": 1,
+			"created_at": "2014-01-01T12:00:00.000Z",
+			"updated_at": "2014-01-01T12:00:00.000Z",
+			"body": "Well hello!",
+			"is_pose": false,
+			"votes_count": 0,
+			"image_url": null,
+			"profile": {
+				"id": 1,
+				"name": "Dragon",
+				"site_identifier": "Dragon",
+				"url": "/Dragon"
+			},
+			"profile_pic": {
+				"id": 1,
+				"type": "ProfilePic",
+				"url": "fixtures/files/Chimera-pic.jpg"
+			},
+			"commentable": {
+				"id": 1,
+				"type": "Journal"
+			},
+			"url": "/journals/1/comments/2"
+		}
+	],
+
+	"dragonSubmissionComments": [
+		{
+			"id": 3,
+			"comment_id": null,
+			"created_at": "2014-01-01T12:00:00.000Z",
+			"updated_at": "2014-01-01T12:00:00.000Z",
+			"body": "Hey there!",
+			"is_pose": false,
+			"votes_count": 0,
+			"image_url": null,
+			"profile": {
+				"id": 2,
+				"name": "Donkey",
+				"site_identifier": "Donkey",
+				"url": "/Donkey"
+			},
+			"profile_pic": {
+				"id": 1,
+				"type": "ProfilePic",
+				"url": "fixtures/files/Chimera-pic.jpg"
+			},
+			"commentable": {
+				"id": 1,
+				"type": "Submission"
+			},
+			"url": "/submissions/1/comments/1"
+		},
+		{
+			"id": 4,
+			"comment_id": 1,
+			"created_at": "2014-01-01T12:00:00.000Z",
+			"updated_at": "2014-01-01T12:00:00.000Z",
+			"body": "Well hello!",
+			"is_pose": false,
+			"votes_count": 0,
+			"image_url": null,
+			"profile": {
+				"id": 1,
+				"name": "Dragon",
+				"site_identifier": "Dragon",
+				"url": "/Dragon"
+			},
+			"profile_pic": {
+				"id": 1,
+				"type": "ProfilePic",
+				"url": "fixtures/files/Chimera-pic.jpg"
+			},
+			"commentable": {
+				"id": 1,
+				"type": "Submission"
+			},
+			"url": "/submissions/1/comments/2"
+		}
+	]
+}

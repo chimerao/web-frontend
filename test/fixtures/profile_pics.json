@@ -1,0 +1,47 @@
+{
+	"dragonPics": [
+		{
+			"id": 1,
+			"title": "Chimera-240.jpg",
+			"is_default": true,
+			"type": "ProfilePic",
+			"url": "/profiles/1/pics/1",
+			"image": {
+				"available_sizes": [
+					48,
+					52,
+					64,
+					80,
+					96,
+					128,
+					256,
+					384,
+					512
+				],
+				"url": "fixtures/files/Chimera-240.jpg"
+			}
+		},
+		{
+			"id": 2,
+			"title": "Chimera-240.jpg",
+			"is_default": false,
+			"type": "ProfilePic",
+			"url": "/profiles/1/pics/2",
+			"image": {
+				"available_sizes": [
+					48,
+					52,
+					64,
+					80,
+					96,
+					128,
+					256,
+					384,
+					512
+				],
+				"url": "fixtures/files/Chimera-240.jpg"
+			}
+		}
+
+	]
+}

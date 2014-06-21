@@ -1,0 +1,10 @@
+<div class="stream-item">
+	<a href="/<%= profile.site_identifier %>" class="profile-link"><img src="<%= profile.profile_pic.pixels_96.url %>" class="profile-pic" /></a>
+	<div class="profile-head">
+		<%= profile.name %>
+		<span>@<%= profile.site_identifier %></span>
+		<span>- <%= timeAgo(item.created_at) %></span>
+	</div>
+	<%= display %>
+	<div class="clear"></div>
+</div>

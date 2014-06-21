@@ -1,0 +1,8 @@
+<h1>Groups</h1>
+
+<p>Groups allow you to limit access of submissions and journals to specific people.</p>
+
+<table id="settings-filters"></table>
+<div id="new-filter" class="glyph">+</div>
+
+<div id="form-container"></div>

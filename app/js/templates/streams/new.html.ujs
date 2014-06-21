@@ -1,0 +1,23 @@
+<h1>New Stream</h1>
+
+<form accept-charset="UTF-8" action="#" class="new_stream" id="new_stream" method="post">
+	<fieldset>
+		<label for="stream_name">Name</label>
+		<input id="stream_name" name="stream[name]" spellcheck="false" type="text" />
+
+		<label for="stream_tags">Tags</label>
+		<input id="stream_tags" name="stream[tags]" spellcheck="false" type="text" />
+
+		<label for="stream_submissions">
+			<input id="stream_submissions" type="checkbox" value="submissions" />
+			Submissions
+		</label>
+
+		<label for="stream_journals">
+			<input id="stream_journals" type="checkbox" value="journals" />
+			Journals
+		</label>
+
+		<button name="button" type="submit">create stream</button>
+	</fieldset>
+</form>

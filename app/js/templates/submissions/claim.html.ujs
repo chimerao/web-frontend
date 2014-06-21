@@ -1,0 +1,6 @@
+<h1>Claim Submission</h1>
+<p>Do you want to ask for ownership of this submission?</p>
+<div class="weight-down">
+	<button id="claim-yes">Yes</button>
+	<button id="claim-no" class="cancel">No</button>
+</div>

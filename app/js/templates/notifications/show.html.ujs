@@ -1,0 +1,18 @@
+<% if (notification.type === 'Collaboration' || notification.type === 'SubmissionClaim') { %>
+<img src="<%= notification.target.image.thumb_240.url %>" class="target-pic" />
+<% } %>
+
+<img src="<%= profilePic.pixels_80.url %>" class="profile-pic" />
+
+<% if (notification.type === 'Collaboration') { %>
+<p><strong><%= notification.actor.name %></strong> has tagged you in the submission <strong><%= notification.target.title %></strong></p>
+<% } else if (notification.type === 'FilterJoin') { %>
+<p><strong><%= notification.actor.name %></strong> has asked to join your <strong><%= notification.target.name %></strong> filter</p>
+<% } else if (notification.type === 'SubmissionClaim') { %>
+<p><strong><%= notification.actor.name %></strong> has asked claim ownership of your submission <strong><%= notification.target.title %></strong></p>
+<% } %>
+
+<button id="approve">approve</button>
+<button id="decline" class="cancel">decline</button>
+
+<div class="clear"></div>

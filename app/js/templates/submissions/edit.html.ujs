@@ -1,0 +1,54 @@
+<h1>Edit Submission</h1>
+
+<div class="combined">
+	<div class="submission-form column">
+	<% if (submission.submission_id) { %>
+		<div class="previous">
+			<img src="<%= submission.previous_submission.image.thumb_240.url %>" />
+			<div class="glyph">&#x2192;</div>
+			<h6>Series</h6>
+			<p><%= submission.previous_submission.title %></p>
+		</div>
+	<% } %>
+	<% if (submission.replyable) { %>
+		<div class="previous">
+			<% if (submission.replyable.image) { %>
+				<img src="<%= submission.replyable.image.thumb_240.url %>" />
+			<% } %>
+			<div class="glyph">&#x2192;</div>
+			<h6>Reply</h6>
+			<p><%= submission.replyable.title %></p>
+		</div>
+	<% } %>
+		<img src="<%= submission.image.thumb_400.url %>" id="select-image-<%= submission.id %>" class="edit-image" />
+		<% if (submissions.length > 0) { %>
+		<% submissions.forEach(function (sub) { %>
+			<img src="<%= sub.image.thumb_180.url %>" class="grouped-image" />
+		<% }) %>
+		<% } %>
+	</div>
+
+	<form accept-charset="UTF-8" action="#" class="edit_submission" id="edit-submission" method="patch">
+		<fieldset class="submission">
+			<div class="clear"></div>
+
+			<label for="submission_title">Title</label>
+			<input type="text" id="submission_title" value="<%= submission.title %>" placeholder="Title" />
+
+			<div id="description_editable" class="description editable<% if (submission.type === 'SubmissionStory') { %> story<% } %>"><%= marked(submission.description) %></div>
+
+			<label for="submission_tags">Tags</label>
+			<input type="text" id="submission_tags" value="<%= submission.tags.join(' ') %>" />
+
+			<div id="filter-list"></div>
+			<div class="clear"></div>
+
+			<div id="folder-list"></div>
+			<div class="clear"></div>
+
+			<button type="submit" class="save">save</button>
+			<button type="submit" id="publish">publish</button>
+		</fieldset>
+	</form>
+	<div class="clear"></div>
+</div>

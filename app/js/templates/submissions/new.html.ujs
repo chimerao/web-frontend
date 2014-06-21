@@ -1,0 +1,10 @@
+<h1>Unpublished Submissions</h1>
+
+<form accept-charset="UTF-8" action="/profiles/<%= profile.id %>/submissions" class="new_submission" enctype="multipart/form-data" id="new_submission" method="post">
+	<fieldset>
+		<input id="submission_file" multiple="multiple" name="submission[file][]" type="file" />
+		<p>Browse for files, or just drag them into the browser window.</p>
+	</fieldset>
+</form>
+<div id="thumbnails"></div>
+<div class="clear"></div>

@@ -1,0 +1,9 @@
+<a class="thumbnail" href="<%= url %>"><img src="<%= image.thumb_240.url %>" style="top:<%= thumbnailTop(width, height) %>px;"<% if (is_adult) { %> class="filtered"<% } %> /></a>
+<div class="data" style="<%= thumbDataStyle(width, height) %>">
+	<ul>
+		<li><div>&#x2665;</div><%= favorites_count %></li>
+		<li><div>&#x25CA;</div><%= comments_count %></li>
+		<li><div>&#x21B9;</div><%= shares_count %></li>
+		<li><div>&#x25C9;</div><%= views_count %></li>
+	</ul>
+</div>

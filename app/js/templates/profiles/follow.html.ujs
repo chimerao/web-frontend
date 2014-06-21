@@ -1,0 +1,8 @@
+<h1>You are following <%= profile.name %></h1>
+
+<ul id="streams"></ul>
+
+<div class="weight-down">
+	<button id="follow-save">save</button>
+	<button id="unfollow" class="cancel">unfollow</button>
+</div>
