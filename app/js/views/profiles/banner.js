@@ -32,7 +32,7 @@ define('views/profiles/banner', ['backbone', 'chimera/global', 'chimera/api'],
 
       sendFile: function () {
         var file = this.input[0].files[0],
-          url = Chi.currentProfile.get('url') + '/banner';
+          url = '/profiles/' + Chi.currentProfile.id + '/banner';
 
         API.sendFile(url, file, {
           success: function (banner_image) {
