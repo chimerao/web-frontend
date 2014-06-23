@@ -1,0 +1,64 @@
+.messages > h1 {
+  text-align: center;
+}
+.messages > ul#boxes {
+  float: left;
+  margin: 4em 0 0 2em;
+  width: 180px;
+}
+.messages > ul#boxes li {
+  padding: 0.2em 0;
+  cursor: pointer;
+}
+.messages > ul#boxes li.active {
+  font-weight: bold;
+}
+#messages-container {
+  float: left;
+  width: 920px;
+}
+#messages-container > .options {
+  margin: 0 0 0 100px;
+}
+#messages-container > .options button {
+  float: left;
+  clear: none;
+  background: rgb(128,128,128);
+}
+#messages-container div.global {
+  clear: left;
+  margin: 0 0 6px 0;
+}
+#messages-container > table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+#messages-container > table tr {
+  cursor: pointer;
+}
+#messages-container > table tr.unread {
+  font-weight: bold;
+}
+#messages-container > table td {
+  padding: 4px 0;
+  border: none;
+  border-bottom: 1px solid rgb(224,224,224);
+}
+#messages-container > table td:nth-child(1) {
+  width: 2%;
+  padding-right: 8px;
+}
+#messages-container > table td:nth-child(2) {
+  width: 20%;
+}
+#messages-container > table td:nth-child(3) {
+  width: 66%;
+  color: rgb(172,172,172);
+}
+#messages-container > table td:nth-child(3) > span {
+  color: rgb(0,0,0);
+}
+#messages-container > table td:nth-child(4) {
+  width: 12%;
+  text-align: center;
+}

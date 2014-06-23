@@ -1,0 +1,116 @@
+/* Forms */
+label {
+  display: block;
+  color: rgb(64,64,64);
+  padding: 0.5em 0 0 0.9em;
+  margin: 0 0 0.5em 0;
+  clear: both;
+}
+input[type="text"],
+input[type="password"] {
+  display: block;
+  font-size: 1.5em;
+  width: 15em;
+  margin: 0 1em 0.5em 0.5em;
+  clear: both;
+  float: left;
+  padding: 0.4em;
+  border: 1px solid rgb(152,152,152);
+  color: rgb(0,0,0);
+  background: rgb(255,255,255);
+  border-radius: 4px;
+}
+/*
+input[type="checkbox"] {
+  float: left;
+  width: 28px;
+  height: 28px;
+  -webkit-appearance: none;
+  background: url(/images/checkbox-sprite.png) no-repeat 0 0;
+  margin: 0 0.5em 0 0.6em;
+  position: relative;
+  bottom: 0.5em;
+}
+input[type="checkbox"]:checked {
+  background: url(/images/checkbox-sprite.png) no-repeat 0 -28px;
+}
+input[type="radio"] {
+  float: left;
+  width: 23px;
+  height: 23px;
+  -webkit-appearance: none;
+  background: url(/images/radio-sprite.png) no-repeat 0 0;
+  margin: 0 1.1em 0 0.8em;
+  position: relative;
+  bottom: 0.4em;
+}
+input[type="radio"]:checked {
+  background: url(/images/radio-sprite.png) no-repeat 0 -23px;
+}
+*/
+textarea {
+  display: block;
+  font-size: 1em;
+  clear: both;
+  padding: 0.4em;
+  border: 1px solid rgb(152,152,152);
+  color: rgb(0,0,0);
+  background: rgb(255,255,255);
+  border-radius: 4px;
+  width: 370px;
+  height: 3em;
+  margin-left: 1em;
+}
+button,
+a.button {
+  display: block;
+  clear: both;
+  padding: 0.45em 1.25em 0.6em 1.25em;
+  margin: 1.25em 0 1em 0.6em;
+  border-radius: 6px;
+  font-weight: bold;
+  color: rgb(255,255,255);
+  text-shadow: rgba(0,0,0,0.2) 0 -1px 1px;
+  background: rgb(96,128,24);
+  box-shadow: rgba(0,0,0,0.2) 0 2px 2px;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+}
+button:hover,
+a.button:hover {
+  background: rgb(160,192,36);
+}
+button:active,
+a.button:active {
+  text-shadow: rgba(0,0,0,0.2) 0 -1px 2px;
+  background: rgb(88,120,20);
+  box-shadow: rgba(0,0,0,0.2) 0 -1px 2px;
+  position: relative;
+  top: 1px;
+}
+a.button {
+  display: inline;
+}
+button:disabled {
+  opacity: 0.5;
+  background: rgb(96,128,24);
+  box-shadow: rgba(0,0,0,0.2) 0 2px 2px;
+  top: 0;
+}
+button.cancel,
+a.button.cancel {
+  background: rgb(172,74,58);
+}
+button.cancel:hover,
+a.button.cancel:hover {
+  background: rgb(220,118,70);
+}
+button.cancel:active,
+a.button.cancel:active {
+  background: rgb(195,67,63);
+}
+
+form fieldset {
+  width: 32em;
+  margin: 0 auto;
+}

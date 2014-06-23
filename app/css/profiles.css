@@ -1,0 +1,192 @@
+/* Profile banner */
+div#banner.no-image {
+  background: rgb(232,232,232);
+  height: 256px;
+  margin-bottom: 8px;
+  position: relative;
+}
+div#banner.image {
+  height: 442px;
+  margin-bottom: 8px;
+  position: relative;
+}
+div#banner > a,
+div#banner h1 a,
+div#banner h2 a {
+  color: rgb(0,0,0);
+}
+div#banner h1, h2 {
+  font-weight: normal;
+  margin-bottom: 0.3em;
+}
+div#banner h1 {
+  margin: 0 0 0.25em 0;
+  font-size: 26pt;
+}
+div#banner h2 {
+  font-size: 18pt;
+}
+div#banner p {
+  line-height: 1.25em;
+  margin-bottom: 0.8em;
+}
+div#banner.image p {
+  clear: left;
+}
+div#banner.no-image > img.profile-pic,
+div#banner.no-image > a > img.profile-pic {
+  float: left;
+  margin-right: 1.5em;
+  width: 256px;
+  height: 256px;
+}
+div#banner.image img.profile-pic {
+  float: left;
+  margin: -0.2em 0.5em 0.25em -0.3em;
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+}
+div#banner.image div.banner-image {
+  height: 400px;
+}
+div#banner.no-image > div.primary {
+  width: 48em;
+  padding: 1em 0 0 0;
+}
+div#banner.image div.primary {
+  width: 47em;
+  padding: 1em 0 0 2em;
+}
+div#banner div.profiles > div.pics {
+  clear: left;
+}
+div#banner div.profiles > div.pics img {
+  border-radius: 3px;
+}
+div#banner div.location {
+  line-height: 1.25em;
+}
+div#banner div.site {
+  line-height: 1.25em;
+}
+div#banner.no-image > div.extra {
+  margin: 1.25em 1.5em 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+div#banner.image div.extra {
+  padding: 1em 0 0 2em;
+}
+div#banner > div.extra div.tags span.glyph {
+  font-size: 1.5em;
+  line-height: 0.75em;
+}
+div#banner div.nav {
+  height: 42px;
+  width: 100%;
+  background: rgb(232,232,232);
+}
+div#banner ul.nav {
+  width: 20em;
+  margin: 0 auto;
+}
+div#banner ul.nav > li {
+  float: left;
+  width: 10em;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+div#banner.no-image div.nav {
+  background: none;
+  position: absolute;
+  bottom: 0;
+}
+
+div#content.profiles.new h2 {
+  margin: 0 auto;
+  width: 450px;
+}
+
+div#profile-container {
+  position: relative;
+  min-height: 500px;
+}
+div.widget {
+  position: absolute;
+  padding: 0 2% 0 2%;
+}
+
+/* Settings */
+
+ul#settings-list {
+  float: left;
+  width: 300px;
+}
+ul#settings-list li {
+  width: 200px;
+  border-bottom: 1px solid rgb(128,128,128);
+  border-right: 1px solid rgb(128,128,128);
+  padding: 4px;
+  cursor: pointer;
+}
+ul#settings-list li.active {
+  border-right: none;
+}
+div#setting-content {
+  float: left;
+}
+
+table#settings-filters td,
+table#settings-folders td {
+  width: 6em;
+  text-align: center;
+  cursor: pointer;
+}
+table#settings-filters td:nth-child(1),
+table#settings-folders td:nth-child(1) {
+  width: 10em;
+  text-align: left;
+}
+div#new-filter,
+div#new-folder {
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+#member-list .delete {
+  color: red;
+}
+
+/* Profile Pics */
+
+ul#profile-pic-list > li {
+  float: left;
+  margin: 0 0.75em 1.5em 0.75em;
+  width: 128px;
+  height: 128px;
+  text-align: center;
+}
+ul#profile-pic-list > li > a.delete {
+  display: block;
+  float: right;
+  width: 10px;
+  padding: 0 6px 3px 6px;
+  color: white;
+  background: rgb(192,32,32);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(192,0,0)), to(rgb(128,0,0)), color-stop(0.15, rgb(216,32,32)), color-stop(0.3, rgb(216,32,32)));
+  border-radius: 6px;
+  position: relative;
+  bottom: 18px;
+  z-index: 2;
+}
+ul#profile-pic-list > li > div.pic {
+  width: 128px;
+  height: 128px;
+}
+ul#profile-pic-list > li > div.pic > img {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+ul#profile-pic-list > li.default > div.pic > img {
+  box-shadow: 0 0 10px rgb(255,92,0);
+}

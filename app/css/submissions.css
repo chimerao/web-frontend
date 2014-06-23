@@ -1,0 +1,227 @@
+/*
+div#content.profiles div#submissions {
+  float: left;
+  width: 55%;
+  padding: 0 2% 0 2%;
+}
+div#content.profiles div#journals {
+  float: left;
+  width: 35%;
+  padding: 0 2% 0 2%;
+}
+*/
+div#content.submissions div.image { text-align: center; clear: both; padding-top: 8px; }
+div#content.submissions div.image img { box-shadow: rgba(0,0,0,0.3) 0 0 16px;  }
+
+div#content.submissions div.submission-group {
+    width: 100%;
+    max-height: 720px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+div#content.submissions div.submission-group > div {
+    width: 3000px;
+    height: 700px;
+}
+div#content.submissions div.submission-group div.image {
+    float: left;
+    clear: none;
+}
+
+/* New/Unpublished Submissions */
+
+div#content.profile_submissions.unpublished h1 {
+  text-align: center;
+}
+div#content.profile_submissions.unpublished fieldset {
+  width: 450px;
+  margin: 0 auto;
+}
+div#content.profile_submissions.unpublished fieldset button {
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+div#content.profile_submissions img.progress {
+  height: 90%;
+  width: 0%;
+  border-radius: 2px;
+  display: block;
+  position: relative;
+  top: -280px;
+}
+div#content.profile_submissions div.delete {
+  position: relative;
+  top: 20px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px;
+}
+
+/* Submission Edit Form */
+
+div.combined {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.submission-form div.column {
+  float: left;
+  width: 464px;
+}
+div.submission-form div.previous {
+  position: absolute;
+  float: left;
+  width: 140px;
+  margin: 40px 0 0 -140px;
+}
+div.submission-form div.previous img {
+  width: 120px;
+}
+div.submission-form div.previous div.glyph {
+  float: right;
+  width: 10px;
+  position: relative;
+  top: 40px;
+  font-size: 2em;
+}
+div.submission-form div.previous p {
+  font-size: 0.7em;
+}
+img.edit-image {
+  float: left;
+  margin: 0 32px;
+}
+img.grouped-image {
+  margin: 8px 26px;
+}
+fieldset.submission {
+  float: left;
+  width: 450px;
+}
+fieldset.submission input {
+  width: 450px;
+}
+fieldset.submission > div.description {
+  width: 456px;
+  height: 100px;
+  margin: 0 0 0.5em 0.75em;
+  font-size: 1em;
+  clear: both;
+  padding: 0.4em;
+  border: 1px solid rgb(152,152,152);
+  color: rgb(0,0,0);
+  background: rgb(255,255,255);
+  border-radius: 4px;
+  overflow: auto;
+}
+fieldset.submission > div.description.story {
+  width: 700px;
+  height: auto;
+}
+fieldset.submission div#filter-list {
+  clear: left;
+}
+fieldset.submission div#filter-list label {
+  float: left;
+  width: 100px;
+  clear: none;
+}
+fieldset.submission div#filter-list input {
+  width: 20px;
+}
+fieldset.submission button {
+  float: left;
+  clear: none;
+}
+fieldset.submission button.save {
+  background-color: rgb(0,0,164);
+  float: left;
+}
+
+
+/*
+div#content.profile_submissions.edit h1,
+div#content.profile_submissions.new h1,
+div#content.profile_submissions.reply h1,
+div#content.profile_submissions.series h1 {
+  text-align: center;
+}
+fieldset.submission {
+  width: 600px;
+  margin: 0 auto;
+}
+fieldset.submission div.group-wrapper {
+  padding: 8px;
+  margin: 0 0 0 1em;
+  border: 1px solid rgb(152,152,152);
+  border-radius: 4px;
+}
+fieldset.submission ul.submission-group {
+  width: 600px;
+  min-height: 112px;
+}
+fieldset.submission ul.submission-group > li.image {
+  float: left;
+  width: 96px;
+  height: 96px;
+  display: block;
+  margin: 0 auto;
+}
+fieldset.submission ul.submission-group > li.image img {
+}
+fieldset.submission > input {
+  width: 600px;
+}
+fieldset.submission > div.description {
+  width: 606px;
+  height: 100px;
+  margin: 0 0 0.5em 0.75em;
+  font-size: 1em;
+  clear: both;
+  padding: 0.4em;
+  border: 1px solid rgb(152,152,152);
+  color: rgb(0,0,0);
+  background: rgb(255,255,255);
+  border-radius: 4px;
+  overflow: auto;
+}
+fieldset.submission #select-image {
+  background: rgb(255,255,255);
+  border: solid 1px rgb(164,164,164);
+  box-shadow: 0 0 3px rgb(172,172,172);
+  position: absolute;
+  width: 320px;
+  height: 300px;
+  z-index: 1010;
+  overflow-y: auto;
+  display: none;
+}
+fieldset.submission #select-image li {
+  float: left;
+  width: 96px;
+  height: 96px;
+  margin: 2px;
+}
+fieldset.submission textarea#submission_description {
+  display: none;
+}
+
+fieldset.submission ul#common-tags {
+  clear: both;
+  height: 1em;
+}
+fieldset.submission ul#common-tags > li {
+  float: left;
+  margin-right: 1em;
+  cursor: cell;
+}
+fieldset.submission div#filters {
+  clear: both;
+  margin-top: 1em;
+}
+fieldset.submission div#filters > label {
+  clear: none;
+  float: left;
+  width: 6em;
+}
+
+*/

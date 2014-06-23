@@ -1,0 +1,413 @@
+/* Fonts */
+@font-face {
+  font-family: 'ChimeraoGlyphs';
+  src: url('/css/fonts/ChimeraoGlyphs.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.glyph {
+  font-family: 'ChimeraoGlyphs';
+}
+
+/* Hide the abnormally large svg tags (still needs to be "visible" tho) */
+svg {
+  height: 0;
+  width: 0;
+}
+
+/* Reset most tag styles */
+body, h1, h2, h3, h4, h5, h6, div, span, a, p, blockquote, ul, li, img, form, fieldset, label, button, input[type="text"], input[type="password"], input[type="checkbox"], textarea, table, tr, td, th {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1em;
+  background: none;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  background: rgb(216,216,216);
+  min-width: 1280px;
+  color: rgb(0,0,0);
+  padding-top: 52px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+}
+h1 {
+  font-size: 22pt;
+}
+h2 {
+  font-size: 16pt;
+}
+h3 {
+  font-size: 14pt;
+}
+h4 {
+  font-size: 12pt;
+}
+h5 {
+  font-size: 10pt;
+}
+h6 {
+  font-size: 9pt;
+}
+
+p {
+  line-height: 1.35em;
+}
+/*
+a {
+  color: rgb(52,33,194);
+  text-shadow: rgb(244,244,244) 0 0 1px;
+  -webkit-transition: color 0.2s linear;
+}
+a:hover { color: rgb(100,71,242);
+}
+*/
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: rgb(0,96,224);
+}
+a:visited,
+a:hover {
+  color: rgb(192,72,192);
+}
+a:active {
+  color: rgb(224,96,0);
+}
+
+div.tags a,
+div.tags a:visited {
+  color: rgb(0,96,224);
+}
+div.tags a:hover {
+  color: rgb(192,72,192);
+}
+div.tags a:active {
+  color: rgb(224,96,0);
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.clear {
+  clear: both;
+}
+div.clear-left {
+  clear: left;
+}
+div.clear-right {
+  clear: right;
+}
+
+/* Flash notices and errors */
+div.flash {
+  clear: both;
+  width: 100%;
+  color: rgb(52,52,52);
+  margin: 0;
+  padding: 0.75em;
+  text-align: center;
+  text-shadow: rgb(224,224,224) 0 0 1px;
+  line-height: 1em;
+}
+div.flash#success {
+  background: rgb(204,255,24);
+}
+div.flash#notice {
+  background: rgb(124,248,255);
+}
+div.flash#warning {
+  background: rgb(244,244,12);
+}
+div.flash#error {
+  background: rgb(255,72,84);
+}
+
+
+/* Header, content, and footer */
+
+div.header {
+  background: rgb(112,112,116);
+  color: rgb(255,255,255);
+  height: 52px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2900;
+  min-width: 768px;
+}
+div.header a {
+  color: rgb(255,255,255);  
+}
+div.header div.glyph {
+  font-size: 42px;
+  padding: 5px;
+}
+div.header > div.logo {
+  position: absolute;
+  font-size: 40px;
+  left: 50%;
+  top: 6px;
+}
+div.header a div.nav-text {
+  padding: 18px 0 0 0.5em;
+  float: left;
+}
+div#header > div.left-nav div.glyph {
+  float: left;
+  margin-left: 0.5em;
+}
+div#header > div.right-nav div.glyph {
+  float: right;
+  margin-right: 0.5em;
+}
+div#header > div.right-nav > div.profile {
+  float: right;
+  margin-right: 1em;
+  width: 68px;
+  height: 52px;
+  position: relative;
+}
+div#header > div.right-nav div.profile-pic > a {
+  width: 52px;
+  height: 52px;
+}
+div#header > div.right-nav div.profile-pic img {
+  width: 52px;
+  height: 52px;
+}
+div#header > div.right-nav a#profile-select {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 32px;
+  padding: 20px 0 0 1px;
+  background: rgb(142,142,146);
+  font-size: 0.8em;
+}
+div#header div#profile-select-box {
+  background: rgb(255,255,255);
+  color: rgb(0,0,0);
+  text-shadow: none;
+  width: 264px;
+  height: 140px;
+  position: absolute;
+  top: 52px;
+  right: -18px;
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgb(32,32,32);
+  z-index: 1000;
+}
+div#header div#profile-select-box > div.profile-select-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 4px 0 4px 8px;
+}
+div#header div#profile-select-box > ul > li {
+  width: 256px;
+  height: 48px;
+  padding: 4px 4px;
+  cursor: pointer;
+}
+div#header div#profile-select-box > ul > li:hover {
+  background: rgb(236,236,255);
+}
+div#header div#profile-select-box > ul > li > img {
+  float: left;
+  padding-right: 4px;
+}
+div#header div#profile-select-box > ul > li > span {
+  line-height: 48px;
+}
+div#header div#settings {
+  cursor: pointer;
+}
+div#header a.header-messages {
+  position: relative;
+  display: block;
+  float: right;
+}
+div#header a#nav-notifications {
+  display: none;
+  color: rgb(128,216,255);
+}
+div#header div#nav-message-count,
+div#header div#nav-notification-count {
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(0,0,0);
+  background: rgb(255,255,255);
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgb(112,112,116);
+  border-radius: 12px;
+  min-width: 12px;
+  display: none;
+}
+
+/* Temp header placements */
+div.header div.right-nav a#nav-login,
+div.header div.right-nav a#nav-signup,
+div.header div.right-nav div.separator {
+  font-size: 1.1em;
+  float: right;
+  margin: 0.75em 1em 0 0;
+}
+
+/* Menus */
+div.menu {
+  background: rgb(255,255,255);
+  color: rgb(0,0,0);
+  text-shadow: none;
+  width: 10em;
+  height: 5em;
+  position: absolute;
+  padding: 1em 0;
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgb(32,32,32);
+  z-index: 1100;
+}
+div.menu a {
+  color: rgb(0,0,0);
+  display: block;
+  padding: 0.5em 0 0.5em 1em;
+  margin-bottom: 0.25em;
+  width: 9em;
+}
+div.menu a:hover {
+  background: rgb(236,236,255);
+}
+div#settings > div.menu {
+  top: 52px;
+  right: 18px;
+}
+div.header div.menu a {
+  color: rgb(0,0,0);
+}
+
+/* Content */
+
+#content {
+  clear: both;
+  background: rgb(244,244,244);
+}
+
+/* Footer */
+
+#footer {
+  clear: both;
+}
+#footer .copyright {
+  font-size: 0.7em;
+  text-align: center;
+  color: rgb(128,128,128);
+
+
+  display: none;
+
+}
+
+/* Thumbnails */
+
+div#thumbnails {
+  clear: both;
+}
+div#thumbnails > div {
+  float: left;
+  width: 324px;
+  height: 288px;
+}
+a.thumbnail {
+  display: block;
+  float: left;
+  margin: 14px 0 14px 14px;
+  border-radius: 6px;
+  text-align: center;
+  width: 260px;
+  height: 260px;
+}
+/* a.thumbnail:hover {
+  background: rgb(255,255,224);
+} */
+a.thumbnail > img {
+  box-shadow: rgba(0,0,0,0.3) 0 0 4px;
+  border-radius: 3px;
+  transition: -webkit-filter 0.15s;
+  position: relative;
+}
+a.thumbnail > img.filtered {
+  -webkit-filter: blur(4px);
+}
+a.thumbnail > img.filtered:hover {
+  -webkit-filter: none;
+}
+a.thumbnail > img:active {
+  box-shadow: none;
+}
+div#thumbnails > div > div.data {
+  font-size: 14px;
+  float: left;
+  width: 48px;
+  height: 60px;
+  position: relative;
+}
+div#thumbnails > div > div.data > ul > li {
+  color: rgb(128,128,128);
+  margin-bottom: 4px;
+}
+div#thumbnails > div > div.data > ul > li > div {
+  font-family: 'ChimeraoGlyphs';
+  font-size: 1.2em;
+  margin-right: 4px;
+  float: left;
+}
+
+/* Profile pic select */
+
+div.profile-pic-selectable {
+  position: relative;
+  cursor: pointer;
+}
+div#profile-pic-select {
+  background: rgb(255,255,255);
+  width: 162px;
+  height: 148px;
+  padding: 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1010;
+  position: absolute;
+  left: -64px;
+  top: -8px;
+  box-shadow: 0 0 3px rgb(32,32,32);
+  border-radius: 2px;
+  float: left;
+}
+div#profile-pic-select li {
+  float: left;
+  padding: 4px;
+}
+div#profile-pic-select li > img {
+  box-shadow: none;
+}
+div#profile-pic-select p {
+    text-align: center;
+    margin-top: 48px;
+}

@@ -1,0 +1,147 @@
+/* page controls */
+
+div#content.profile_journals.edit h1 {
+  text-align: left;
+}
+
+div.page_controls {
+  width: 100%;
+  position: fixed;
+  top: 52px;
+  left: 0;
+  color: rgb(255,255,255);
+  background: rgb(132,132,136);
+  box-shadow: 0 0 2px rgb(32,32,32);
+  min-width: 1000px;
+  z-index: 1050;
+}
+div.page_controls a {
+  color: rgb(255,255,255);
+  display: block;
+  width: 100%;
+  height: 22px;
+  padding-top: 6px;
+  margin-top: -6px;
+}
+div.page_controls > ul > li {
+  float: left;
+  min-width: 8em;
+  text-align: center;
+  border-right: 1px solid rgb(62,62,66);
+  height: 22px; /* entire list height is defined here */
+  padding: 6px 0 2px 0;
+}
+div.page_controls > ul > li.title {
+  font-size: 1.1em;
+  background: rgb(62,62,66);
+  height: 22px;
+  padding: 6px 0 2px 0;
+}
+div.page_controls > ul > li.save {
+  background: rgb(0,0,128);
+}
+div.page_controls > ul > li.publish {
+  background: rgb(96,128,24);
+}
+div.page_controls > ul > li.save:hover {
+  background: rgb(0,0,164);
+}
+div.page_controls > ul > li.publish:hover {
+  background: rgb(156,188,84);
+}
+div.page_controls > ul > li.back:hover {
+  background: rgb(164,0,4);
+}
+div.page_controls > ul > li.tag-list > div {
+  float: left;
+  margin-left: 1em;
+}
+div.page_controls > ul > li.tag-list > input {
+  font-size: 1em;
+  width: 10em;
+  padding: 0 4px;
+  clear: none;
+  margin: -1px 1em 0 0.5em;
+  background: rgb(232,232,232);
+}
+div.page_controls > ul > li#filter-control {
+  cursor: pointer;
+}
+div.page_controls > ul > li#filter-control > div#filter-list {
+  color: rgb(0,0,0);
+  background: rgb(255,255,255);
+  box-shadow: 0 0 2px rgb(32,32,32);
+  width: auto;
+  height: auto;
+  position: relative;
+  top: 10px;
+  padding: 0.5em;
+  text-align: left;
+  display: none;
+}
+
+/* journals */
+
+div.journals.show div.journal.wrapper,
+div.journals.index div.journal.wrapper {
+  font-family: Georgia, serif;
+  width: 44em;
+  margin: 0 auto 2em auto;
+  padding-top: 1em;
+}
+div.journals.show div.journal.wrapper > div.body > div.timestamp,
+div.journals.index div.journal.wrapper > div.body > div.timestamp {
+   margin: -0.5em 0 0.75em 0;
+}
+div.journals.show div.journal.wrapper > div.journal-pic {
+    margin: 0 1em 0 -1em; float:left;
+}
+div.journals.show div.journal > h1, div.journal.wrapper > h2 {
+  margin: 0;
+}
+div.journals.show div.journal.wrapper p {
+  margin-bottom: 1em;
+}
+
+/* new and edit pages */
+
+fieldset.journal {
+  width: 600px;
+  margin: 0 auto;
+  padding: 52px 0 2em 0;
+}
+fieldset.journal input {
+  width: 600px;
+}
+fieldset.journal h1.title.edit {
+  margin-bottom: 1em;
+}
+fieldset.journal div.body {
+  width: 606px;
+  min-height: 18em;
+  margin: 0 0 0 0.75em;
+  font-size: 1em;
+  clear: both;
+  padding: 0.4em;
+  color: rgb(0,0,0);
+  border-radius: 4px;
+}
+.edit.placeholder:after {
+    color: #B3B3B1;
+    font-style: italic;
+    content: attr(data-placeholder);
+}
+fieldset.journal > div.journal-page {
+  background: rgb(255,255,255);
+  box-shadow: 0 0 3px rgb(128,128,128);
+  border-radius: 1px;
+  padding: 1em;
+}
+div#content.profile_journals.new div.reply {
+  padding-top: 52px;
+  margin-bottom: -48px;
+}
+fieldset.journal div.profile-pic {
+  position: absolute;
+  margin-left: -116px;
+}

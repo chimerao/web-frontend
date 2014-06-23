@@ -1,0 +1,271 @@
+/* "Flow" styles, that determine what is displayed after a submission, journal, etc. */
+
+div.flow {
+  clear: both;
+  width: 800px;
+  margin: 0 auto;
+}
+div.flow > div {
+  padding: 0.4em 0;
+}
+div.flow > div.head {
+  position: relative;
+}
+div.flow > div.head > div.folder {
+  clear: left;
+  height: 1em;
+  min-width: 1em;
+  margin: 0 0 0.4em 0.3em;
+}
+div.flow > div.head > div.social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12em;
+}
+div.flow > div.head > div.social > form > input {
+  float: right;
+  width: 12em;
+}
+div.flow > div.head > div.social > div.fave input {
+  float: right;
+  width: 6em;
+}
+div.flow > div.head > ul.metadata {
+  clear: both;
+}
+div.flow > div.head > ul.metadata > li {
+  color: rgb(128,128,128);
+  float: left;
+  height: 1.5em;
+  margin-right: 2em;
+}
+div.flow > div.head > ul.metadata > li > span.glyph {
+  margin-right: 4px;
+  font-size: 1.2em;
+}
+div.flow > div.tags {
+  clear: both;
+}
+div.flow > div.series > div {
+  width: 400px;
+  min-height: 10px;
+  float: left;
+  padding-bottom: 6px;
+}
+div.flow > div.series > div > div,
+div.flow > div.series > div > img {
+  cursor: pointer;
+}
+div.flow > div.series > div > img {
+  height: 150px;  
+}
+div.flow > div.series > div.next {
+  text-align: right;
+}
+div.flow > div.series > div div.glyph {
+  height: 150px;
+  font-size: 48px;
+  position: relative;
+  top: 52px;
+}
+div.flow > div.series > div.previous div.glyph {
+  float: left;
+}
+div.flow > div.series > div.next div.glyph {
+  float: right;
+}
+div.flow > div.series > div.next img {
+  float: right;
+}
+div.flow > div.replies {
+  clear: both;
+  border-top: solid rgb(172,172,172) 1px;
+}
+div.flow > div.replies > a.reply-link {
+  float: left;
+  clear: left;
+  display: block;
+}
+
+/* Submission-specific flow styles */
+
+div.flow > div.head > h1.submission.title {
+  width: 20em;
+  float: left;
+  margin-bottom: 0.2em;
+}
+div.collaborators {
+  clear: both;
+  border-top: solid rgb(172,172,172) 1px;
+  height: 80px;
+}
+div.collaborators > div.collaborator {
+  float: left;
+  width: 200px;
+  height: 80px;
+}
+div.collaborators > div.collaborator > a {
+  float: left;
+}
+div.collaborators > div.collaborator > a > img {
+  width: 80px;
+  height: 80px;
+  margin-right: 0.2em;
+}
+div.submission.flow > div.description {
+  clear: both;
+  border-top: solid rgb(172,172,172) 1px;
+}
+div.submission.flow > div.series {
+  clear: both;
+  border-top: solid rgb(172,172,172) 1px;
+}
+
+
+/* Discussions (Comments) */
+
+div.discussion {
+  border-top: solid rgb(172,172,172) 1px;
+  margin: 1em auto 0 auto;
+  clear: both;
+}
+div.discussion li.comment {
+  clear: left;
+  margin: 0 0 0 0;
+  padding: 1em 0 0 1em;
+}
+div.discussion li.comment div.profile-pic {
+  float: left;
+}
+div.discussion li.comment div.profile-pic > a,
+div.discussion li.make-comment div.profile-pic div.profile-pic-image {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 1em 0 0;
+}
+div.discussion li.make-comment div.profile-pic img,
+fieldset.journal div.profile-pic img {
+  box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+}
+div.discussion li.comment > div.profile-pic > a > img:active,
+div.discussion li.make-comment div.profile-pic img:active,
+fieldset.journal div.profile-pic img:active {
+  box-shadow: none;
+}
+div.discussion li.comment > div.name,
+div.discussion li.make-comment div.name {
+  float: left;
+  min-width: 12em;
+}
+
+div.discussion li.comment div.text,
+div.discussion li.make-comment div.text {
+  border: 1px solid rgb(172,172,172);
+  border-radius: 6px;
+  padding: 20px;
+  background: rgb(255,255,255);
+}
+div.discussion li.make-comment div.text {
+  margin-top: 0.5em;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+div.discussion li.comment > div.vote {
+  float: right;
+  width: 6em;
+}
+div.discussion li.comment > div.vote > span {
+  float: left;
+  width: 2em;
+}
+div.discussion li.comment div.bubble {
+  clear: right;
+}
+div.discussion li.comment div.bubble {
+  float: left;
+  width: 76%;
+}
+div.discussion li.comment > div.bubble div.comment-stats {
+  font-size: 0.7em;
+  color: rgb(142,142,142);
+  margin: 1px 0.4em 0 0;
+  float: right;
+}
+
+div.discussion li.comment > div.controls {
+  float: right;
+  width: 3em;
+  margin: 0.25em 0 0 0;
+  text-align: center;
+}
+div.discussion li.comment > div.controls > a {
+  line-height: 1.5em;
+}
+
+div.discussion > ul#comments li.make-comment > form textarea {
+  background: rgb(255,255,255);
+  font-size: 1em;
+  height: 6em;
+  width: 97%;
+  outline: none;
+  border: 1px solid rgb(172,172,172);
+}
+div.discussion > ul#comments li.make-comment > form button {
+  float: left;
+  margin: 0.5em 0 0 114px;
+}
+div.discussion > ul#comments li.make-comment > form div.attach-image {
+  clear: both;
+  margin: 0.5em 0 0.5em 7.25em;
+  color: rgb(132,132,132);
+  cursor: pointer;
+}
+div.discussion > ul#comments li.make-comment > form div.attach-image > span {
+  font-size: 1.2em;
+  color: rgb(32,172,16);
+}
+div.discussion > ul#comments li.make-comment > form input.comment-image-input {
+  clear: both;
+  margin: 0.5em 0 0.5em 10.5em;
+  display: none;
+}
+
+
+/* Pose comment adjustments */
+div.discussion li.comment.pose > div.name {
+  display: none;
+}
+div.discussion li.comment.pose div.text {
+  background: none;
+  border: none;
+  padding: 0;
+  min-height: 72px;
+}
+
+/* Submission Select */
+
+div#submission-select {
+  background: rgb(255,255,255);
+  width: 226px;
+  height: 212px;
+  padding: 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1010;
+  position: absolute;
+  box-shadow: 0 0 3px rgb(32,32,32);
+  border-radius: 2px;
+}
+div#submission-select li {
+  width: 96px;
+  height: 96px;
+  float: left;
+  margin: 4px;
+  box-shadow: 0 0 1px rgb(172,172,172);
+  border-radius: 1px;
+  cursor: pointer;
+}

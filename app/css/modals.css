@@ -1,0 +1,160 @@
+/* Modal dialog boxes and related elements */
+
+body > div#cast {
+  background-color: rgba(0,0,0,0.3);
+/*  opacity: 0.3;
+  filter: alpha(opacity=30); */
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  background-repeat: repeat;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2999;
+}
+
+div#modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 3000;
+/*  background: rgb(244,244,244);
+  border-radius: 4px;
+*/}
+div#modal h1 {
+  font-size: 16pt;
+  margin: 0 0 0.5em 0;
+  font-weight: bold;
+}
+div#modal > div.dialog {
+  background: rgba(144,144,144,0.7);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgba(0,0,0,0.3);
+  margin: 0 auto 0 auto;
+}
+div#modal > div.dialog > div {
+  background: rgb(244,244,244);
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+div#modal button {
+  float: left;
+  clear: none;
+}
+div#modal .weight-down {
+  position: absolute;
+  bottom: 10px;
+}
+
+
+
+
+
+
+
+
+div#modal > div.dialog > div div#user-pic-select {
+  bottom: 100px;
+  right: 0;
+  margin-bottom: -160px;
+}
+
+div#modal > div.login.dialog {
+  width: 22em;
+  height: 15.5em;
+  text-align: left;
+  margin: 250px auto 0 auto;
+}
+div#modal > div.login.dialog > div {
+  height: 14em;
+  padding: 0.5em 1em 1em 1em;
+}
+div#modal > div.login.dialog > div > form > input {
+  display: block;
+  font-size: 1.25em;
+  margin: 0 0 0.25em 0.5em;
+  clear: both;
+}
+div#modal > div.login.dialog > div > form > input[type="text"],
+div#modal > div.login.dialog > div > form > input[type="password"] {
+  color: rgb(216,216,216);
+  padding: 0.2em;
+  border: 1px solid rgb(152,152,152);
+  background: rgb(255,255,255);
+  border-radius: 4px;
+}
+
+div#modal > div.comment.dialog {
+  width: 33em;
+  height: 13.25em;
+}
+div#modal > div.comment.dialog > div {
+  text-align: left;
+  height: 12em;
+}
+div#modal > div.comment.dialog > div > form button {
+  float: left;
+  margin: 1em 0 0 6.5em;
+}
+div#modal > div.comment.dialog > div > div#modal-cancel {
+  position: relative;
+  left: 10px;
+  top: 20px;
+}
+
+div#modal > div.flag.dialog {
+  width: 26em;
+  height: 13.25em;
+}
+div#modal > div.flag.dialog > div {
+  text-align: left;
+  height: 12em;
+}
+div#modal > div.flag.dialog > div > form button {
+  float: left;
+  margin: 1em 0 0 6.5em;
+}
+div#modal > div.flag.dialog > div > div#modal-cancel {
+  position: relative;
+  left: 10px;
+  top: 20px;
+}
+
+div#modal > div.message.dialog {
+  width: 33em;
+  height: 20.25em;
+  margin-top: 160px;
+}
+div#modal > div.message.dialog > div > h1 {
+  margin-bottom: 1em;
+  color: #000;
+  text-shadow: none;
+}
+div#modal > div.message.dialog > div {
+  text-align: left;
+  height: 19em;
+}
+div#modal > div.message.dialog > div > form button {
+  float: left;
+  margin: 1em 0 0 6.5em;
+}
+div#modal > div.message.dialog > div > form div.text {
+  height: 12em;
+}
+div#modal > div.message.dialog > div > form textarea {
+  height: 85%;
+}
+div#modal > div.message.dialog > div > div#modal-cancel {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+
+.follow #modal label {
+  float: left;
+  clear: none;
+}
