@@ -8,7 +8,7 @@
 	<fieldset>
 		<label for="profile_name">Name</label>
 		<input id="profile_name" name="profile[name]" spellcheck="false" type="text" />
-		<label for="profile_site_identifier">Site Identifier</label>
+		<label for="profile_site_identifier">Unique Identifier</label>
 		<input id="profile_site_identifier" name="profile[site_identifier]" spellcheck="false" type="text" />
 		<button name="button" type="submit">create profile</button>
 	</fieldset>
