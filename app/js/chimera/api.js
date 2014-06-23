@@ -71,7 +71,7 @@ define('chimera/api', ['jquery', 'chimera/global'], function ($, Chi) {
       async: options.async,
       dataType: 'json',
       headers: requestHeaders(),
-      cache: false, // temporary for dev
+//      cache: false, // temporary for dev
       crossDomain: true,
       success: function (responseJSON) {
         options.success(responseJSON);

@@ -1124,8 +1124,8 @@
     // Default JSON-request options.
     var params = {
       type: type,
-      dataType: 'json',
-      cache: false // temporary for dev
+      dataType: 'json'
+//      cache: false // temporary for dev
     };
 
     // Check if there's a token and include that if it exists.
