@@ -3,15 +3,14 @@ define(['views/signup'], function (SignUpView) {
 
     it('should render a form', function () {
       new SignUpView().render();
-      expect($('input#username')).toBeInDOM();
       expect($('input#email')).toBeInDOM();
       expect($('input#password')).toBeInDOM();
       expect($('input#password_confirmation')).toBeInDOM();
     });
 
-    it('should have username input focused', function () {
+    it('should have email input focused', function () {
       new SignUpView().render();
-      expect($('input#username')).toBeFocused();
+      expect($('input#email')).toBeFocused();
     });
   });
 });
