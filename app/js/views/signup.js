@@ -23,12 +23,11 @@ define('views/signup',
           class: 'users new'
         });
         this.inputs = {
-          username: $('#username'),
           email: $('#email'),
           password: $('#password'),
           password_confirmation: $('#password_confirmation'),
         };
-        this.inputs.username.focus();
+        this.inputs.email.focus();
         return this;
       },
 
@@ -37,7 +36,6 @@ define('views/signup',
 
         var self = this,
           formData = {
-          username: this.inputs.username.val(),
           email: this.inputs.email.val(),
           password: this.inputs.password.val(),
           password_confirmation: this.inputs.password_confirmation.val()
@@ -50,7 +48,7 @@ define('views/signup',
 
         user.save(null, {
           success: function () {
-            Auth.login(self.inputs.username.val(), self.inputs.password.val());
+            Auth.login(self.inputs.email.val(), self.inputs.password.val());
           },
           error: function (user, response, options) {
             var errors = JSON.parse(response.responseText);

@@ -10,8 +10,8 @@ define('models/user', ['backbone'],
     validate: function (attrs) {
       if (attrs.password !== attrs.password_confirmation) {
         return 'passwords need to match';
-      } else if (attrs.username.length > 40) {
-        return 'username cannot be over 40 characters';
+      } else if (attrs.email.length > 80) {
+        return 'email cannot be over 80 characters';
       }
     }
   });
