@@ -32,8 +32,8 @@ define('views/profiles/new',
       });
       profile.save(null, {
         success: function (profile) {
+          Chi.Router.navigate('/' + profile.get('site_identifier'));
           Auth.switchToProfile(profile);
-          Chi.Router.navigate('/' + profile.get('site_identifier'), {trigger: true});
         },
         error: function (profile, response, options) {
           console.log('error');
