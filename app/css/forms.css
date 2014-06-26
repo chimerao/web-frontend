@@ -114,3 +114,8 @@ form fieldset {
   width: 32em;
   margin: 0 auto;
 }
+
+fieldset span.error {
+  color: rgb(255,0,0);
+  font-size: 0.8em;
+}

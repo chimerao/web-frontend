@@ -313,15 +313,12 @@ div.header div.menu a {
 
 #footer {
   clear: both;
+  padding-top: 0.5em;
 }
 #footer .copyright {
   font-size: 0.7em;
   text-align: center;
   color: rgb(128,128,128);
-
-
-  display: none;
-
 }
 
 /* Thumbnails */

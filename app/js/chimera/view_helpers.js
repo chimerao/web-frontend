@@ -2,7 +2,7 @@
 /* global define */
 
 // Helper methods for conveniently manipulating data in views.
-define('chimera/view_helpers', [], function () {
+define('chimera/view_helpers', ['jquery'], function ($) {
 
   var TIMEBLOCKS = {
     second: 1,
@@ -119,6 +119,39 @@ define('chimera/view_helpers', [], function () {
         right += parseInt((pixels - ((pixels / height) * width)) / 2, 10);
       }
       return 'top:' + top + 'px;right:' + right + 'px;';
+    },
+
+    /*
+      Displays errors in a standard form.
+
+      Parameters
+
+      errors: Required. The hash object of errors passed in.
+      objectKey: Prefaces the element with the object's type
+        (i.e. 'profile') since most forms use 'objectType_fieldName' as ids.
+    */
+    formErrors: function (errors, objectKey) {
+      objectKey = objectKey ? objectKey + '_' : '';
+      Object.keys(errors).forEach(function (key) {
+        $('#' + objectKey + key).css({ background: 'pink' });
+        $('#' + key + '_error').html(errors[key][0]);
+      });
+    },
+
+    /*
+      Clears any residual errors in forms.
+
+      Parameters
+
+      objectKey: Prefaces the element with the object's type
+        (i.e. 'profile') since most forms use 'objectType_fieldName' as ids.
+    */
+    clearFormErrors: function (keys, objectKey) {
+      objectKey = objectKey ? objectKey + '_' : '';
+      $('.error').empty();
+      keys.forEach(function (key) {
+        $('#' + objectKey + key).css({ background: 'rgb(255,255,255)' });
+      });
     }
   };
 });

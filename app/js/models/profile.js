@@ -43,6 +43,21 @@ define('models/profile', ['backbone', 'models/profile_pic', 'collections/profile
       }
     },
 
+    validate: function (attrs) {
+      var errors = {};
+
+      if (attrs.name.length > 40) {
+        errors['name'] = ['is too long (maximum is 40 characters)'];
+      }
+      if (attrs.site_identifier.length > 40) {
+        errors['site_identifier'] = ['is too long (maximum is 40 characters)'];
+      }
+
+      if (Object.keys(errors).length > 0) {
+        return errors;
+      }
+    },
+
     setProfile: function () {
       this.profilePics.each(function (pic) {
         pic.profile = this;

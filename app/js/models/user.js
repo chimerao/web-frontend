@@ -8,10 +8,20 @@ define('models/user', ['backbone'],
     urlRoot: '/user',
 
     validate: function (attrs) {
+      var errors = {};
+
       if (attrs.password !== attrs.password_confirmation) {
-        return 'passwords need to match';
-      } else if (attrs.email.length > 80) {
-        return 'email cannot be over 80 characters';
+        errors['password_confirmation'] = ['must match password'];
+      }
+      if (attrs.password.length < 8) {
+        errors['password'] = ['is too short (minimum is 8 characters)'];
+      }
+      if (attrs.email.length > 80) {
+        errors['email'] = ['cannot be over 80 characters'];
+      }
+
+      if (Object.keys(errors).length > 0) {
+        return errors;
       }
     }
   });

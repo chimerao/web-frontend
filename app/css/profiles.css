@@ -190,3 +190,10 @@ ul#profile-pic-list > li > div.pic > img {
 ul#profile-pic-list > li.default > div.pic > img {
   box-shadow: 0 0 10px rgb(255,92,0);
 }
+
+/* New profile form */
+
+div#content.profiles.new p.welcome {
+  margin: 0 auto;
+  width: 450px;
+}

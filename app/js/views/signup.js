@@ -7,9 +7,10 @@ define('views/signup',
     'chimera/template',
     'chimera/page',
     'models/user',
-    'chimera/authenticate'
+    'chimera/authenticate',
+    'chimera/view_helpers'
   ],
-  function (Backbone, Template, Page, User, Auth) {
+  function (Backbone, Template, Page, User, Auth, Helpers) {
 
     var SignUpView = Backbone.View.extend({
       el: '#content',
@@ -28,36 +29,34 @@ define('views/signup',
           password_confirmation: $('#password_confirmation'),
         };
         this.inputs.email.focus();
+
         return this;
       },
 
       submit: function (e) {
         e.preventDefault();
 
-        var self = this,
-          formData = {
-          email: this.inputs.email.val(),
-          password: this.inputs.password.val(),
-          password_confirmation: this.inputs.password_confirmation.val()
-        },
+        var formData = {
+            email: this.inputs.email.val(),
+            password: this.inputs.password.val(),
+            password_confirmation: this.inputs.password_confirmation.val()
+          },
           user = new User(formData);
 
-        Object.keys(formData).forEach(function (key) {
-          $('#' + key).css({'background':'rgb(255,255,255)'});
-        });
+        Helpers.clearFormErrors(Object.keys(formData));
 
-        user.save(null, {
-          success: function () {
-            Auth.login(self.inputs.email.val(), self.inputs.password.val());
-          },
-          error: function (user, response, options) {
-            var errors = JSON.parse(response.responseText);
-            console.log(errors);
-            Object.keys(errors).forEach(function (key) {
-              $('#' + key).css({'background':'pink'});
-            });
-          }
-        });
+        if (user.isValid()) {
+          user.save(null, {
+            success: function () {
+              Auth.login(this.inputs.email.val(), this.inputs.password.val());
+            }.bind(this),
+            error: function (user, response, options) {
+              Helpers.formErrors(JSON.parse(response.responseText));
+            }
+          });
+        } else {
+          Helpers.formErrors(user.validationError);
+        }
       }
     });
 
