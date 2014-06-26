@@ -3,7 +3,7 @@
 	  <ul>
 	    <li class="title">New Journal</li>
 	    <li class="filter" id="filter-control">
-	      <div>Filters <span id="filter-arrow">&#9660;</span></div>
+	      <div>Groups <span id="filter-arrow">&#9660;</span></div>
 	      <div id="filter-list"></div>
 	    </li>
 	    <li class="tag-list">

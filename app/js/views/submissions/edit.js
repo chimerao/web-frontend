@@ -84,7 +84,7 @@ define('views/submissions/edit',
         var header = $('<p/>');
 
         if (this.filters.length > 0) {
-          header.html('Filters');
+          header.html('Groups');
           this.filterList.append(header);
         }
 
