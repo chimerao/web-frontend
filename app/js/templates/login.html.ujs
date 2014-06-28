@@ -2,13 +2,17 @@
 
 <form accept-charset="UTF-8" action="/login" method="post" id="login-form">
 	<fieldset>
+		<p><span class="error" id="login_error"></span></p>
 		<label for="identifier">Email or Username</label>
 		<input type="text" id="identifier" name="identifier" tabindex="1" />
+
 		<label for="password">Password</label>
 		<input type="password" id="password" name="password" tabindex="2" />
+
 		<label for="remember" class="remember">
 			<input type="checkbox" name="remember" id="remember" tabindex="3" value="1" />remember me
 		</label>
+
 		<button type="submit" tabindex="4">sign in</button>
 	</fieldset>
 </form>

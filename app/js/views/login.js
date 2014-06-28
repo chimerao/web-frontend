@@ -21,9 +21,16 @@ define('views/login', ['chimera/global', 'backbone', 'chimera/template', 'chimer
 
     submit: function (e) {
       e.preventDefault();
+      var loginError = $('#login_error');
+
+      loginError.empty();
+
       Auth.login($('input#identifier').val(), $('input#password').val(), {
         success: function () {
           Chi.Router.navigate('/', {trigger: true});
+        },
+        failure: function () {
+          loginError.html('Invalid login.');
         }
       });
     }
