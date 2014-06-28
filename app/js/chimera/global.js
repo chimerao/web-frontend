@@ -5,6 +5,7 @@ define('chimera/global', ['models/profile'],
   function (Profile) {
 
   var Chimera = {
+    VERSION: '0.1.0',
     TEMPLATES_PATH: '/js/templates/',
     currentProfile: new Profile({}),
     allProfiles: [],

@@ -16,7 +16,7 @@ define('chimera/template', ['chimera/global', 'underscore', 'jquery'],
     
     var Template = function (name) {
       this.name = name;
-      this.url = Chi.TEMPLATES_PATH + name + '.html.ujs';
+      this.url = Chi.TEMPLATES_PATH + name + '.html.ujs?v=' + Chi.VERSION;
     };
     Template.prototype = {
       // Synchronous request to get the template from the server
